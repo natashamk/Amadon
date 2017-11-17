@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Amadon</title>
+</head>
+<body>
+
+<div class="container">
+  <h2>Amadon.com</h2>                      
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dojo T-shirt</td>
+        <td>$19.99</td>
+        <td><form action="/process" method="POST">
+            {% csrf_token %}
+            <select name='quantity'>
+               <option value='1'>0</option>
+               <option value='2'>1</option>
+               <option value='3'>2</option>
+               <option value='4'>3</option>
+            </select>
+            <input type='hidden' name='product_id' value='0' />
+            <input type='submit' value='Buy' />
+        </form> </td>
+      </tr>
+      <tr>
+        <td>Dojo Sweater</td>
+        <td>$29.99</td>
+        <td><form action="/process" method="POST">
+            {% csrf_token %}
+            <select name='quantity'>
+               <option value='1'>0</option>
+               <option value='2'>1</option>
+               <option value='3'>2</option>
+               <option value='4'>3</option>
+            </select>
+            <input type='hidden' name='product_id' value='1' />
+            <input type='submit' value='Buy' />
+        </form> </td>
+      </tr>
+      <tr>
+        <td>Dojo Cup</td>
+        <td>$4.99</td>
+        <td><form action="/process" method="POST">
+            {% csrf_token %}
+            <select name='quantity'>
+               <option value='1'>0</option>
+               <option value='2'>1</option>
+               <option value='3'>2</option>
+               <option value='4'>3</option>
+            </select>
+            <input type='hidden' name='product_id' value='2'/>
+            <input type='submit' value='Buy' />
+        </form> </td>
+      </tr>
+      <tr>
+        <td>Algorithm Book</td>
+        <td>$49.99</td>
+        <td><form action="/process" method="POST">
+            {% csrf_token %}
+            <select name='quantity'>
+               <option value='1'>0</option>
+               <option value='2'>1</option>
+               <option value='3'>2</option>
+               <option value='4'>3</option>
+            </select>
+            <input type='hidden' name='product_id' value='3' />
+            <input type='submit' value='Buy' />
+        </form> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
